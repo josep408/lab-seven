@@ -1,0 +1,42 @@
+
+        <%- include('partials/header.ejs') %>
+        <div class="jumbotron">
+        <h1> Pixabay Search (Express Version) </h1>
+        </div>
+        <div class ="container">
+        <form action="/results" method="GET">
+            
+            <!-- Keyword: <input type="text" name="keyword"> -->
+            <div class="form-group row"><label>Enter keyword</label> <input type="text"  id="keyword" name="keyword" placeholder ="keyword"/></div>
+            <button> Search! </button>
+
+          <fieldset class="form-group">
+            <div class="form-group row"><label>Orientation</label><select id ="orientation" name="orientation">
+                <option value="">Select one</option>
+                <option value="h">Horizontal</option>
+                <option value="v">Vertical</option>
+            </select></div>
+        </fieldset>
+            <!-- <div class="form-group row"><button id="search" type="button" class="btn btn-dark">Search!</button></div> -->
+            
+        </form> <br>
+        <div class="floatleft">
+        Likes:<%= images.hits[0].likes %> <br>
+         <img src='<%= images.hits[0].largeImageURL %>' width='300'><br>
+        <hr>
+        Likes:<%= images.hits[1].likes %> <br>
+         <img src='<%= images.hits[1].largeImageURL %>' width='300'><br>
+         <hr>
+     </div>
+
+     <div class="floatright">
+         Likes:<%= images.hits[2].likes %> <br>
+          <img src='<%= images.hits[2].largeImageURL %>' width='300'><br>
+          <hr>
+          Likes:<%= images.hits[3].likes %> <br>
+           <img src='<%= images.hits[3].largeImageURL %>' width='300'><br>
+          <hr>
+      </div>
+
+      <%- include('partials/footer.ejs') %>
+ 

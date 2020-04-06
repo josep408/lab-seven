@@ -1,0 +1,67 @@
+    <%- include('partials/header.ejs') %>
+
+        <div class="jumbotron">
+        <h1> Pixabay Search Results </h1>
+        </div>
+
+        <div class ="container">
+        <form action="/results" method="GET">
+            
+            Keyword: <input type="text" name="keyword" placeholder="keyword"><br>
+            <button> Search! </button>
+           <!-- <div class="form-group row"><button id="search" type="button" class="btn btn-dark">Search!</button></div> -->
+             <fieldset class="form-group">
+            <div for="orientation" class="form-group row"><label>Orientation</label><select id ="orientation" name="orientation">
+                <option value="">Select one</option>
+                <option value="h">Horizontal</option>
+                <option value="v">Vertical</option>
+            </select></div>
+        </fieldset>
+        </form> <br>
+        
+
+        <% if("#orientation" == "h") { %> 
+        <div class="floatleft">
+          <div id="horizon">
+        Likes:<%= images.hits[0].likes %> <br>
+         <img src='<%= images.hits[0].webformatURL %>' width='300' ><br>
+        <hr>
+        Likes:<%= images.hits[1].likes %> <br>
+         <img src='<%= images.hits[1].webformatURL %>' width='300'><br>
+         <hr>
+          </div>
+     </div>
+     <div class="floatright">
+      <div id="horizon">
+         Likes:<%= images.hits[2].likes %> <br>
+          <img src='<%= images.hits[2].webformatURL %>' width='300'><br>
+          <hr>
+          Likes:<%= images.hits[3].likes %> <br>
+           <img src='<%= images.hits[3].webformatURL %>' width='300'><br>
+          <hr>
+        </div>
+     </div>
+      <% }else { %>
+      <div class="floatleft">
+        <div id="Vertical">
+        Likes:<%= images.hits[0].likes %> <br>
+         <img src='<%= images.hits[0].webformatURL %>'  width='300'><br>
+        <hr>
+        Likes:<%= images.hits[1].likes %> <br>
+         <img src='<%= images.hits[1].webformatURL %>' width='300'><br>
+         <hr>
+       </div>
+     </div>
+     <div class="floatright">
+      <div id="Vertical">
+         Likes:<%= images.hits[2].likes %> <br>
+          <img src='<%= images.hits[2].webformatURL %>' width='300'><br>
+          <hr>
+          Likes:<%= images.hits[3].likes %> <br>
+           <img src='<%= images.hits[3].webformatURL %>' width='300'><br>
+          <hr>
+        </div>
+      </div>
+      <% } %>
+
+      <%- include('partials/footer.ejs') %>

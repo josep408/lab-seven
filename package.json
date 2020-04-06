@@ -1,0 +1,32 @@
+{
+  "name": "lab-seven",
+  "version": "1.0.0",
+  "description": "lba 7 homework",
+  "main": "app.js",
+  "scripts": {
+    "test": "test "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josep408/lab-seven.git"
+  },
+  "keywords": [
+    "lab",
+    "seven",
+    "7",
+    "lab",
+    "assignment"
+  ],
+  "author": "Jose Perez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/josep408/lab-seven/issues"
+  },
+  "homepage": "https://github.com/josep408/lab-seven#readme",
+  "dependencies": {
+    "ejs": "^3.0.2",
+    "express": "^4.17.1",
+    "faker": "^4.1.0",
+    "request": "^2.88.2"
+  }
+}
