@@ -25,7 +25,7 @@
   "homepage": "https://github.com/josep408/lab-seven#readme",
   "dependencies": {
     "ejs": "^3.0.2",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "faker": "^4.1.0",
     "request": "^2.88.2"
   }
